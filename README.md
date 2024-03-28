@@ -13,6 +13,7 @@ and the Flutter guide for
 
 # Beacon Settings
 
+[![pub package](https://img.shields.io/pub/v/beacon_settings.svg)](https://pub.dev/packages/beacon_settings)
 ![CI](https://github.com/btrautmann/beacon_settings/actions/workflows/dart.yml/badge.svg)
 [![codecov](https://codecov.io/gh/btrautmann/beacon_settings/graph/badge.svg?token=MXT6227EXW)](https://codecov.io/gh/btrautmann/beacon_settings)
 
