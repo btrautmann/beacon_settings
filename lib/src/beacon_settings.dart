@@ -32,6 +32,79 @@ abstract class Settings {
     return s;
   }
 
+  /// Creates a new [Setting] that manages a [int].
+  ///
+  /// {@macro setting}
+  @protected
+  Setting<int> intSetting({
+    required String key,
+    int defaultValue = 0,
+  }) {
+    return setting(
+      key: key,
+      decode: intDecoder(defaultValue: defaultValue),
+      encode: intEncoder(),
+    );
+  }
+
+  /// Creates a new [Setting] that manages a [double].
+  ///
+  /// {@macro setting}
+  @protected
+  Setting<double> doubleSetting({
+    required String key,
+    double defaultValue = 0.0,
+  }) {
+    return setting(
+      key: key,
+      decode: doubleDecoder(defaultValue: defaultValue),
+      encode: doubleEncoder(),
+    );
+  }
+
+  /// Creates a new [Setting] that manages a [bool].
+  ///
+  /// {@macro setting}
+  @protected
+  Setting<bool> boolSetting({
+    required String key,
+    bool defaultValue = false,
+  }) {
+    return setting(
+      key: key,
+      decode: boolDecoder(defaultValue: defaultValue),
+      encode: boolEncoder(),
+    );
+  }
+
+  /// Creates a new [Setting] that manages a [String].
+  ///
+  /// {@macro setting}
+  @protected
+  Setting<String?> stringSetting({
+    required String key,
+  }) {
+    return setting(
+      key: key,
+      decode: nullableStringDecoder(),
+      encode: nullableStringEncoder(),
+    );
+  }
+
+  /// Creates a new [Setting] that manages a [List<String>].
+  ///
+  /// {@macro setting}
+  @protected
+  Setting<List<String>> stringListSetting({
+    required String key,
+  }) {
+    return setting(
+      key: key,
+      decode: stringListDecoder(),
+      encode: stringListEncoder(),
+    );
+  }
+
   /// Clears all settings by calling [Setting.reset] on each setting
   /// in the cache.
   void clear() {
