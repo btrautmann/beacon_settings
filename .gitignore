@@ -1,2 +1,3 @@
 coverage/
 .dart_tool/
+pubspec.lock
