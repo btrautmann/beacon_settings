@@ -13,6 +13,9 @@ and the Flutter guide for
 
 # Beacon Settings
 
+![CI](https://github.com/btrautmann/beacon_settings/actions/workflows/dart.yml/badge.svg)
+[![codecov](https://codecov.io/gh/btrautmann/beacon_settings/graph/badge.svg?token=MXT6227EXW)](https://codecov.io/gh/btrautmann/beacon_settings)
+
 A light-weight companion package to [state_beacon](https://pub.dev/packages/state_beacon/example) that provides a simple way to manage settings for a dart application.
 
 ## Example usage
