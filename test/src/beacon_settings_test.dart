@@ -1,6 +1,4 @@
 import 'package:beacon_settings/beacon_settings.dart';
-import 'package:beacon_settings/src/in_memory_storage.dart';
-import 'package:beacon_settings/src/settings_exception.dart';
 import 'package:state_beacon_core/state_beacon_core.dart';
 import 'package:test/test.dart';
 
