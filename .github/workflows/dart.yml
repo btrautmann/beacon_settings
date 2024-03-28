@@ -37,3 +37,4 @@ jobs:
         with:
           files: coverage/lcov.info
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: ${{ github.repository }}
