@@ -230,11 +230,7 @@ void main() {
 class TestSettings extends Settings {
   TestSettings(super.storage);
 
-  late final simpleBool = setting(
-    key: 'simpleBool',
-    decode: boolDecoder(),
-    encode: boolEncoder(),
-  ).value;
+  late final simpleBool = boolSetting(key: 'simpleBool').value;
 
   late final derivedSource = setting(
     key: 'derivedSource',
@@ -252,29 +248,13 @@ class TestSettings extends Settings {
     encode: intEncoder(),
   ).value;
 
-  late final simpleDouble = setting(
-    key: 'simpleDouble',
-    decode: doubleDecoder(),
-    encode: doubleEncoder(),
-  ).value;
+  late final simpleDouble = doubleSetting(key: 'simpleDouble').value;
 
-  late final simpleInt = setting(
-    key: 'simpleInt',
-    decode: intDecoder(),
-    encode: intEncoder(),
-  ).value;
+  late final simpleInt = intSetting(key: 'simpleInt').value;
 
-  late final simpleString = setting(
-    key: 'simpleString',
-    decode: nullableStringDecoder(),
-    encode: nullableStringEncoder(),
-  ).value;
+  late final simpleString = stringSetting(key: 'simpleString').value;
 
-  late final simpleList = setting(
-    key: 'simpleList',
-    decode: stringListDecoder(),
-    encode: stringListEncoder(),
-  ).value;
+  late final simpleList = stringListSetting(key: 'simpleList').value;
 
   late final invalid = setting(
     key: 'invalid',
