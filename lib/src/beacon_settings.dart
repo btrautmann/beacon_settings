@@ -198,13 +198,11 @@ extension SettingsX on Settings {
     required String key,
     int defaultValue = 0,
   }) {
-    final s = setting<int>(
+    return setting<int>(
       key: key,
       decode: intDecoder(defaultValue: defaultValue),
       encode: intEncoder(),
     );
-
-    return s;
   }
 
   /// Creates a new [Setting] that manages a [double].
