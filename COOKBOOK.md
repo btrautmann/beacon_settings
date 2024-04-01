@@ -134,6 +134,7 @@ class MySettings extends Settings {
   // `isNotAwesome` is derived from `isAwesome`. 
   late final isNotAwesome = derivedSetting(
     key: 'isNotAwesome',
+    input: isAwesome,
     decode: (value, isAwesomeValue) {
       return !isAwesomeValue;
     },
