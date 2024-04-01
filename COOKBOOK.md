@@ -6,6 +6,7 @@ This cookbook provides examples of how to use `beacon_settings` in various scena
 
 - [Using with `SharedPreferences`](#using-with-sharedpreferences)
 - [Observing from a Flutter `Widget`](#observing-from-a-flutter-widget)
+- [Using custom decoders and encoders](#using-custom-decoders-and-encoders)
 - [Using `derivedSetting`](#using-derivedsetting)
 
 ### Using with `SharedPreferences`
@@ -96,6 +97,24 @@ class MyWidget extends StatelessWidget {
     return Text(isAwesome.toString());
   }
 }
+```
+
+### Using custom decoders and encoders
+
+You can define custom decoders and encoders for your settings. These can be as complex
+as you need them to be.
+
+```dart
+// Decodes a `ThemeMode` from a String and encodes it back to a String.
+late final themeMode = setting<ThemeMode>(
+  key: 'theme_mode',
+  // Checking for `is! StringSettingValue` will handle the default (null) case
+  // while also coercing the type of `value` to `StringSettingValue` when `false`.
+  decode: (value) => value is! StringSettingValue
+    ? ThemeMode.system //
+    : ThemeMode.values.byName(value.value),
+  encode: (value) => StringSettingValue(value.name),
+).value;
 ```
 
 ### Using `derivedSetting`
