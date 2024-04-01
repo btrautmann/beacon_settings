@@ -21,6 +21,8 @@ A light-weight companion package to [state_beacon](https://pub.dev/packages/stat
 
 ## Example usage
 
+For more complex examples (and examples using Flutter), see the [Cookbook](./COOKBOOK.md).
+
 ```dart
 void main() {
   // Create a new instance of `MySettings` with an in-memory storage.
