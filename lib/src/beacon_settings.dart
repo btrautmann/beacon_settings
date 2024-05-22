@@ -274,7 +274,7 @@ Encoder<int> intEncoder() {
 /// Decoder for a [Setting] that manages a [bool]. If the value is not in
 /// the underlying [Storage], [defaultValue] is returned.
 Decoder<bool> boolDecoder({bool defaultValue = false}) {
-  return (value) => (value is BoolSettingValue && value.value) || defaultValue;
+  return (value) => value is BoolSettingValue ? value.value : defaultValue;
 }
 
 /// Encoder for a [Setting] that manages a [bool].
