@@ -1,4 +1,5 @@
-## What's Changed
+## 0.0.3
+
 * docs: add cookbook by @btrautmann in https://github.com/btrautmann/beacon_settings/pull/5
 * fix(cookbook): add missing param to derivedSetting by @btrautmann in https://github.com/btrautmann/beacon_settings/pull/6
 * fix: boolSetting returns incorrect value when persisted value does not equal default value by @btrautmann in https://github.com/btrautmann/beacon_settings/pull/7
