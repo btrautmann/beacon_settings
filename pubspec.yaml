@@ -1,6 +1,6 @@
 name: beacon_settings
 description: A companion package to `state_beacon` that makes it easy to manage key-value based settings.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/btrautmann/beacon_settings
 
 environment:
